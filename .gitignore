@@ -4,3 +4,5 @@
 .httr-oauth
 .DS_Store
 .quarto
+
+01_Data/01_Originales/ *.csv
