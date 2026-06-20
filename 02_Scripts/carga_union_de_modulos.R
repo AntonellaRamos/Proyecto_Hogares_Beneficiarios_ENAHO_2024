@@ -26,3 +26,14 @@ m700 <- read.csv(
   "01_Data/01_Originales/enaho_m700_2024.csv",
   fileEncoding = "latin1"
 )
+
+# 3. Unión de bases ----
+
+# Llave de merge a nivel hogar
+keys_hogar <- c("CONGLOME", "VIVIENDA", "HOGAR")
+
+# Unión de Módulo 200 (características de los miembros del hogar)
+# con Módulo 700 (participación en programas sociales)
+
+enaho_2024 <- m200 %>%
+  left_join(m700, by = keys_hogar)
