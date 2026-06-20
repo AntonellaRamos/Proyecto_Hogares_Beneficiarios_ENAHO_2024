@@ -14,3 +14,15 @@ library(tidyverse)
 library(readr)
 library(arrow)
 renv::snapshot()
+
+# 2. Importar datos ----
+
+m200 <- read.csv(
+  "01_Data/01_Originales/enaho_m200_2024.csv",
+  fileEncoding = "latin1"
+)
+
+m700 <- read.csv(
+  "01_Data/01_Originales/enaho_m700_2024.csv",
+  fileEncoding = "latin1"
+)
