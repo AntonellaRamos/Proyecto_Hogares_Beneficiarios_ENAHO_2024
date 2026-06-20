@@ -37,3 +37,7 @@ keys_hogar <- c("CONGLOME", "VIVIENDA", "HOGAR")
 
 enaho_2024 <- m200 %>%
   left_join(m700, by = keys_hogar)
+
+# 4. Exportar base de datos creada ----
+
+write_parquet(enaho_2024, "01_Data/02_Procesados/enaho_2024_v1.parquet")
